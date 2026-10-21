@@ -1,0 +1,7 @@
+FROM alpine:latest
+COPY zigzag-webapp/zigzag-main/ /app/
+RUN apk add nodejs npm
+WORKDIR /app
+RUN npm i
+EXPOSE 5173
+CMD ["npm", "run", "dev"]

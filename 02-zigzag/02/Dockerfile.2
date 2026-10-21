@@ -1,0 +1,7 @@
+FROM alpine:3.20
+RUN apk add nodejs npm git
+WORKDIR /app
+RUN git clone https://github.com/michaelkolesidis/zigzag.git .
+RUN npm install
+EXPOSE 5173
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
