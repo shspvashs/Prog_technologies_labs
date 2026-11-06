@@ -10,4 +10,8 @@ echo "MySQL: " . $my->query('SELECT VERSION()')->fetchColumn() . "<br>";
 $redis = new Redis();
 $redis->connect('redis', 6379);
 echo "Redis: " . $redis->info()['redis_version'] . "<br>";
+
+echo "<hr>"; 
+phpinfo();
+
 ?>
